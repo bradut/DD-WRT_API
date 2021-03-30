@@ -1,0 +1,124 @@
+﻿This app read data from a DD-WRT enabled router.
+
+Note: Use Fiddler to see more details
+
+===========================================
+#1. General router info: no need to log in:
+===========================================
+GET http://192.168.0.1/ HTTP/1.1
+Host: 192.168.0.1
+
+Response <html body>:
+
+DD-WRT Control Panel
+------------
+DD-WRT 
+Dlink-DIR-632A 
+LAN MAC
+WAN MAC
+
+WAN IPv4
+192.168.0.1
+
+LAN IP
+192.168.0.1 
+--------------
+Radio is On 
+Bradut 
+9 (2452 MHz HT20) 
+21 dBm 
+144 Mb/s 
+--------------
+WRT-radauth
+-------------
+NVRAM
+39 KB / 64 KB 
+CIFS
+------------
+16:37:52 up 6 days, 6:24, load average: 0.02, 0.04, 0.04
+WAN IP: 192.168.0.1
+- - - - - - - - - - - - - - - - - - - - - - 
+
+
+===========================================
+# 2. Router Status [menu: Status->Router]
+===========================================
+GET http://192.168.0.1/Status_Router.live.asp HTTP/1.1
+
+Response: JSON-like:
+{router_time::Sun, 10 Jan 2021 16:38:00}
+{mem_info::,'total:','used:','free:','shared:','buffers:','cached:','Mem:','29667328','22540288','7127040','0','1716224','4661248','Swap:','0','0','0','MemTotal:','28972','kB','MemFree:','6960','kB','MemShared:','0','kB','Buffers:','1676','kB','Cached:','4552','kB','SwapCached:','0','kB','Active:','3492','kB','Inactive:','4280','kB','Active(anon):','1976','kB','Inactive(anon):','0','kB','Active(file):','1516','kB','Inactive(file):','4280','kB','Unevictable:','432','kB','Mlocked:','0','kB','SwapTotal:','0','kB','SwapFree:','0','kB','Dirty:','0','kB','Writeback:','0','kB','AnonPages:','1976','kB','Mapped:','1184','kB','Shmem:','0','kB','Slab:','5856','kB','SReclaimable:','1044','kB','SUnreclaim:','4812','kB','KernelStack:','264','kB','PageTables:','204','kB','NFS_Unstable:','0','kB','Bounce:','0','kB','WritebackTmp:','0','kB','CommitLimit:','14484','kB','Committed_AS:','3948','kB','VmallocTotal:','1048304','kB','VmallocUsed:','296','kB','VmallocChunk:','1044396','kB'}
+{clkfreq::400}
+{uptime:: 16:38:00 up 6 days, 6:24, load average: 0.02, 0.04, 0.04}
+{ip_conntrack::740}
+{cpu_temp::}
+{voltage::}
+{ipinfo:: IP: 192.168.0.1}
+{nvram::39 KB / 64 KB}
+- - - - - - - - - - - - - - - - - - - - - - 
+
+===========================================
+#3 WAN Info[Status -> WAN]
+===========================================
+GET http://192.168.0.1/Status_Internet.asp HTTP/1.1
+
+Response: HTML
+{wan_shortproto::dhcp}{wan_status::Error  }
+{wan_uptime::6 days, 6:34:34}
+{wan_3g_signal::-40 DBm}
+{wan_ipaddr::192.168.0.10}
+{wan_netmask::255.255.255.0}
+{wan_gateway::192.168.0.1}
+{wan_dns0::192.168.0.1}{wan_dns1::208.67.220.220}
+{wan_dns2::208.67.222.123}
+{dhcp_remaining::0 days 00:00:00}
+{ttraff_in::70486}
+{ttraff_out::22938}
+{uptime:: 16:48:48 up 6 days, 6:35, load average: 0.02, 0.06, 0.04}
+ipinfo:: IP: 192.168.0.1}
+- - - - - - - - - - - - - - - - - - - - - - 
+
+
+===========================================
+#4 Status_Lan [Status -> Lan]
+===========================================
+GET http://192.168.0.1/Status_Lan.live.asp HTTP/1.1
+[implemented]
+- - - - - - - - - - - - - - - - - - - - - - 
+
+===========================================
+#5 Status_Wireless
+===========================================
+GET http://192.168.0.1/Status_Wireless.live.asp HTTP/1.
+[implemented]
+- - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+===========================================
+#5 Sys info
+===========================================
+GET http://192.168.0.1/Info.live.htm HTTP/1.1
+- - - - - - - - - - - - - - - - - - - - - - 
+
+
+===========================================
+#6. Static IP addresses [Servieces -> Services]
+===========================================
+GET http://192.168.0.1/Services.asp HTTP/1.1
+
+Response: HTML
+- - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+===========================================
+#7 Reboot Rooter
+===========================================
+
+POST Request: 
+- - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+
