@@ -49,11 +49,11 @@ This is a convenient way to run the app by just passing the command, assuming th
 
 
 ### Implementation details [C#/ .NET 4.0]
- - Can run on older machines powered by Windows XP, so it targets on purpose .NET 4.0  
  - Works only with routers flashed with [DD-WRT Firmware](https://wiki.dd-wrt.com/wiki/index.php/Installation)  
  - Tested with DD-WRT version 3.0 but it may work with other versions.  
  - Communicates with the router via its HTML Control Interface   
-   Note: DD-WRT does not offer a WebAPI REST service, but anyone may extend this API and create one.    
+   Note: DD-WRT does not offer a WebAPI REST service, but anyone may extend this API and create one.
+ - Targets on purpose .NET 4.0 so that it can run even on older Windows XP machines  
  
 [I also wrote a reboot app that controls the router via Telnet and it seems more efficient]   
 
