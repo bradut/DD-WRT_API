@@ -1,15 +1,24 @@
 ## DD-WRT API 
 
+[![Build Status](https://dev.azure.com/bradut/DD-WRT_API/_apis/build/status/DD-WRT_API-.NET%20Desktop-CI?branchName=master)](https://dev.azure.com/bradut/DD-WRT_API/_build/latest?definitionId=10&branchName=master)
+
 **About:**  
- - This minimalistic API allows communicating with a router powered by [DD-WRT](https://dd-wrt.com/) without using its UI control pannel.
- - I'm using it for home automation therefore it runs on any version of Windows starting with XP.    
- - This repo contains the API + a command line app that uses the API.   
- Author: Bradut Dima
+ - Minimalistic API to communicate with a router powered by [DD-WRT](https://dd-wrt.com/) without using its UI control pannel.
+ - I'm using it for my home automation and intentionally made it compatible with Windows XP (.NET 4.0).    
+ - Repo contains: 
+      - the API 
+      - a console app that uses the API.   
+
+
+Here is the console app in action:
+
+![DD-WRT-API Demo](DD-WRT_API/Docs/DD-WRT-Demo.jpg)
+
 
 **API's Features:**
- - Read the list of WiFi devices
- - Read the list of Active devices
- - Read the list of All devices
+ - Get the list of WiFi devices
+ - Get the list of Active devices
+ - Get the list of All devices
  - Reboot the router
 
 **Setup:**  
@@ -55,7 +64,7 @@ This is a convenient way to run the app by just passing the command, assuming th
 This project is a result of my need to measure the efficiency of a High-Gain antenna I purchased to improve the WiFi signal of an outdoors IP WebCam.  
 The new antenna didn't seem to make a difference, so I wanted to see some numbers to prove me right or wrong.
 
-DD-WRT Control Panel can display useful info about WiFi nodes, although it's a bit difficult to figure-out the device names:   
+The DD-WRT Control Panel can display useful info about WiFi nodes, but it's difficult to figure-out the device names:   
 ![DD-WRT UI - Wireless Nodes ](DD-WRT_API/Docs/WiFi_Nodes.jpg)
 
 This UI didn't fit my needs: I wanted, for each antenna I tested, 
@@ -66,7 +75,7 @@ and with a certain frequency (every 20 seconds).
 Since I couldn't find such a tool, I wrote this app. I hope it will be useful to others.
 
 **Not directly related to this project:**
-My measurements indicated that the <ins>11 dBi High-Gain Antenna</ins> I tested improved the WiFi signal with only 2 dBi !   
+My measurements indicated that the <ins>11 dBi High-Gain Antenna</ins> I tested improved the WiFi signal with only 2 dBi.   
 Unfortunately, switching antennas during measurements damaged the connector and rendered my camera useless :(
 
 ### What is a DD-WRT router anyways?

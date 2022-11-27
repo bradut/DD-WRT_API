@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Docs\ChangeLog.txt" />
+    <Content Include="Docs\DD-WRT-Demo.jpg" />
     <Content Include="Docs\WiFi_Nodes.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
