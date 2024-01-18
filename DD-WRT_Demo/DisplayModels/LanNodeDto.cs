@@ -1,5 +1,6 @@
 ﻿using DD_WRT_API.Models;
 using System;
+using System.Net;
 
 namespace DD_WRT_Demo.DisplayModels
 {
@@ -112,7 +113,29 @@ namespace DD_WRT_Demo.DisplayModels
         {
             if (ReferenceEquals(this, other)) return 0;
             if (ReferenceEquals(null, other)) return 1;
-            return string.Compare(IpAddress, other.IpAddress, StringComparison.Ordinal);
+
+            var thisIpAddressAsNumber = IPToInt(IpAddress);
+            var otherIpAddressAsNumber = IPToInt(other.IpAddress);
+
+            if (thisIpAddressAsNumber == otherIpAddressAsNumber) return 0;
+            if (thisIpAddressAsNumber < otherIpAddressAsNumber) return -1;
+            return +1;
+        }
+
+
+        private static long IPToInt(string ip)
+        {
+            IPAddress address = IPAddress.Parse(ip);
+            byte[] addressBytes = address.GetAddressBytes();
+
+            // This restriction is implicit in your existing code, but it would currently just lose data...
+            if (addressBytes.Length != 4)
+            {
+                throw new ArgumentException("Must be an IPv4 address");
+            }
+            int networkOrder = BitConverter.ToInt32(addressBytes, 0);
+
+            return (uint)IPAddress.NetworkToHostOrder(networkOrder);
         }
     }
 }
