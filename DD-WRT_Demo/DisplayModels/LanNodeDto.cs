@@ -19,20 +19,24 @@ namespace DD_WRT_Demo.DisplayModels
         {
             ConnectionsCount = activeClient.ConnectionsCount;
             IsActive = true;
+
+            if (string.IsNullOrWhiteSpace(IpAddress)) IpAddress = activeClient.IpAddress;
+            if (string.IsNullOrWhiteSpace(MacAddress)) MacAddress = activeClient.MacAddress;
+            if (string.IsNullOrWhiteSpace(HostName)) HostName = activeClient.HostName;
         }
 
         public void Update(WirelessNode wirelessNode)
         {
-            Interface = wirelessNode.Interface;
             UpTime = wirelessNode.UpTime;
             TxRateMb = wirelessNode.TxRateMb;
             RxRateMb = wirelessNode.RxRateMb;
-            Info = wirelessNode.Info;
             SignalLeveldB = wirelessNode.SignalLeveldB;
             NoiseLeveldB = wirelessNode.NoiseLeveldB;
             SignalToNoiseRatiodB = wirelessNode.SignalToNoiseRatiodB;
             SignalQuality = wirelessNode.SignalQuality;
             IsWifi = true;
+
+            if (string.IsNullOrWhiteSpace(MacAddress)) MacAddress = wirelessNode.MacAddress;
         }
 
 
@@ -48,11 +52,9 @@ namespace DD_WRT_Demo.DisplayModels
 
 
         // WiFi
-        private string Interface { get; set; }
         private TimeSpan UpTime { get; set; }
         private int TxRateMb { get; set; }
         private int RxRateMb { get; set; }
-        private string Info { get; set; }
         private int SignalLeveldB { get; set; }
         private int NoiseLeveldB { get; set; }
         private int SignalToNoiseRatiodB { get; set; }
@@ -136,6 +138,11 @@ namespace DD_WRT_Demo.DisplayModels
             int networkOrder = BitConverter.ToInt32(addressBytes, 0);
 
             return (uint)IPAddress.NetworkToHostOrder(networkOrder);
+        }
+
+        public override string ToString()
+        {
+            return $"{IpAddress} - {HostName} - {MacAddress}";
         }
     }
 }

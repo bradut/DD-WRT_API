@@ -241,7 +241,17 @@ namespace DD_WRT_Demo
             {
                 var lanNodeToDisplay =
                     _lanNodesToDisplay.FirstOrDefault(node => node.MacAddress == activeClient.MacAddress);
-                lanNodeToDisplay?.Update(activeClient);
+
+                if (lanNodeToDisplay != null)
+                {
+                    lanNodeToDisplay.Update(activeClient);
+                }
+                else
+                {
+                    lanNodeToDisplay= new LanNodeDto();
+                    lanNodeToDisplay.Update(activeClient);
+                    _lanNodesToDisplay.Add(lanNodeToDisplay);
+                }
             }
 
             foreach (var wirelessNode in wirelessNodes)
