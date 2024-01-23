@@ -28,7 +28,7 @@ The console app in action
     - [List of commands](#list-of-commands)
 - [Implementation details](#implementation-details)
 - [History](#history)
-- [## How I used this project?](#how-i-used-this-project)
+- [How I used this project?](#how-i-used-this-project)
 - [What is a DD-WRT router?](#what-is-a-dd-wrt-router)
 - [Links](#links)
 - [Similar projects](#similar-projects)
