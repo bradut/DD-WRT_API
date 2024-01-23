@@ -109,7 +109,8 @@ I hope that this app will be useful to others as well.<br /><br />
 [To access the dome's screws and antenna connector point, I had to drill a few holes inside the camera's case.]<br /><br />
 
 ## What is a DD-WRT router?
-DD-WRT is Linux-based firmware for wireless routers and access points. Originally designed for the Linksys WRT54G series, it now runs on a wide variety of models. ... The remainder of the name was taken from the Linksys WRT54G model router, a home router popular in 2002–2004.   
+>DD-WRT is Linux-based firmware for wireless routers and access points. Originally designed for the Linksys WRT54G series, it now runs on a wide variety of models. ... The remainder of the name was taken from the Linksys WRT54G model router, a home router popular in 2002–2004."
+
 Source: https://en.wikipedia.org/wiki/DD-WRT
 
 
