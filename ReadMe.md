@@ -68,7 +68,7 @@ This is a convenient way to run the app by just passing the command, assuming th
 
 
 
-## Implementation details [C#/ .NET 4.0]{#implementation-details}
+## Implementation details
  - Works only with routers flashed with [DD-WRT Firmware](https://wiki.dd-wrt.com/wiki/index.php/Installation)  
  - Tested with DD-WRT version 3.0 but it may work with other versions.  
  - Communicates with the router via its HTML Control Interface   
@@ -101,14 +101,14 @@ Given that the DD-WRT UI didn't align with my requirements, I made this project 
 
 I hope that this app will be useful to others as well.<br /><br />
 
-## How I used this project?{#how-i-used-this-project}
+## How I used this project?
 * As mentioned above, I utilized the project to measure and record WiFi signal values into a CSV file for extended durations (two hours) and at specific intervals (every 20 seconds).<br />
 * My measurements indicated that the <ins>11 dBi High-Gain Antenna</ins> I tested improved the WiFi signal by 2 dBi ([58% higher](https://antennatestlab.com/antenna-education-tutorials/what-is-antenna-gain-dbi-scale)).   
 * Unfortunately, switching back-and-forth the old and new antennas during measurements damaged the connector and rendered my camera useless :(<br />
 * <u>Update 2024-01-20</u>: After three years of being stored in a drawer, I have finally fixed the camera by replacing the antenna connector. It is operational once again! :)<br />
 [To access the dome's screws and antenna connector point, I had to drill a few holes inside the camera's case.]<br /><br />
 
-## What is a DD-WRT router anyways?{#what-is-a-dd-wrt-router}
+## What is a DD-WRT router?
 DD-WRT is Linux-based firmware for wireless routers and access points. Originally designed for the Linksys WRT54G series, it now runs on a wide variety of models. ... The remainder of the name was taken from the Linksys WRT54G model router, a home router popular in 2002–2004.   
 Source: https://en.wikipedia.org/wiki/DD-WRT
 
