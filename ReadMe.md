@@ -106,8 +106,9 @@ I hope that this app will be useful to others as well.<br /><br />
 * My measurements indicated that the <ins>11 dBi High-Gain Antenna</ins> I tested improved the WiFi signal by 2 dBi ([58% higher](https://antennatestlab.com/antenna-education-tutorials/what-is-antenna-gain-dbi-scale)).   
 * Unfortunately, switching back-and-forth the old and new antennas during measurements damaged the connector and rendered my camera useless :(<br />
 * <u>Update 2024-01-20</u>: After three years of being stored in a drawer, I have finally fixed the camera by replacing the antenna connector. It is operational once again! :)<br />
-[To access the dome's screws and antenna connector point, I had to drill a few holes inside the camera's case.]<br /><br />
-
+[To access the dome's screws and antenna connector point, I had to drill a few holes inside the camera's case.]<br />
+* <u>Update 2025-07-07</u>: My DD-WRT router stopped working, so I reluctantly replaced it. As a result, I may no longer be able to update this project.
+<br />
 ## What is a DD-WRT router?
 >DD-WRT is Linux-based firmware for wireless routers and access points. Originally designed for the Linksys WRT54G series, it now runs on a wide variety of models. ... The remainder of the name was taken from the Linksys WRT54G model router, a home router popular in 2002–2004."
 
